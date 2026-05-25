@@ -1,158 +1,191 @@
-<svg width="860" height="230" viewBox="0 0 860 230" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="340" viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0e1a"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00f0ff" stroke-width="0.25" opacity="0.05"/>
+    </pattern>
+    <linearGradient id="bluebar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#0050ff"/>
     </linearGradient>
-    <!-- Card gradient -->
-    <linearGradient id="card1bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0f1623"/>
-      <stop offset="100%" stop-color="#080c14"/>
+    <linearGradient id="purplebar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bf00ff"/>
+      <stop offset="100%" stop-color="#ff0080"/>
+    </linearGradient>
+    <linearGradient id="greenbar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff41"/>
+      <stop offset="100%" stop-color="#00d4a0"/>
+    </linearGradient>
+    <linearGradient id="orangebar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff9900"/>
+      <stop offset="100%" stop-color="#ff4400"/>
     </linearGradient>
   </defs>
-  <rect width="860" height="230" rx="14" fill="url(#bg)"/>
 
-  <!-- ======================= CARD 1: LANGUAGES ======================= -->
-  <g>
-    <!-- 3D card with depth shadow -->
-    <rect x="23" y="22" width="248" height="194" rx="10" fill="#000814" opacity="0.6"/>
-    <rect x="20" y="18" width="248" height="194" rx="10" fill="url(#card1bg)" stroke="#3b82f6" stroke-opacity="0.25" stroke-width="1.5">
-      <animate attributeName="stroke-opacity" values="0.25;0.7;0.25" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Glowing top bar -->
-    <rect x="20" y="18" width="248" height="4" rx="2" fill="#3b82f6">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Inner glow effect top-left corner -->
-    <circle cx="40" cy="38" r="30" fill="#3b82f6" opacity="0.04"/>
+  <!-- BG -->
+  <rect width="800" height="340" fill="#030812"/>
+  <rect width="800" height="340" fill="url(#grid)"/>
 
-    <text x="144" y="44" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700" fill="#60a5fa" text-anchor="middle" letter-spacing="2.5" opacity="0">LANGUAGES
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.2s" fill="freeze"/>
-    </text>
-    <line x1="40" y1="52" x2="248" y2="52" stroke="#3b82f6" stroke-opacity="0.12" stroke-width="1"/>
+  <!-- Section Header -->
+  <rect x="0" y="0" width="800" height="38" fill="#000c18"/>
+  <rect x="0" y="38" width="800" height="1" fill="#00f0ff" opacity="0.2"/>
+  <rect x="20" y="0" width="4" height="38" fill="#00f0ff" opacity="0.7"/>
+  <text x="36" y="25" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#00f0ff" letter-spacing="3">LOADOUT // TECH ARSENAL</text>
+  <text x="720" y="25" font-family="'Courier New',Courier,monospace" font-size="9" fill="#555" letter-spacing="1">v2.0.26</text>
 
-    <!-- Python -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.3s" fill="freeze"/>
-      <rect x="36" y="58" width="216" height="28" rx="7" fill="#3776AB" fill-opacity="0.08" stroke="#3776AB" stroke-opacity="0.25" stroke-width="1">
-        <animate attributeName="fill-opacity" values="0.08;0.18;0.08" dur="4s" repeatCount="indefinite"/>
-      </rect>
-      <circle cx="54" cy="72" r="5.5" fill="#3776AB"/>
-      <text x="68" y="77" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">Python</text>
-    </g>
+  <!-- ═══ LEFT COLUMN ═══ -->
 
-    <!-- JavaScript / TypeScript -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.45s" fill="freeze"/>
-      <rect x="36" y="92" width="216" height="28" rx="7" fill="#f7df1e" fill-opacity="0.07" stroke="#f7df1e" stroke-opacity="0.2" stroke-width="1"/>
-      <circle cx="54" cy="106" r="5.5" fill="#f7df1e"/>
-      <text x="68" y="111" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">JavaScript / TypeScript</text>
-    </g>
+  <!-- Category: LANGUAGES -->
+  <text x="30" y="72" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#555" letter-spacing="2">// LANGUAGES</text>
 
-    <!-- Java / C++ -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.60s" fill="freeze"/>
-      <rect x="36" y="126" width="216" height="28" rx="7" fill="#ED8B00" fill-opacity="0.07" stroke="#ED8B00" stroke-opacity="0.2" stroke-width="1"/>
-      <circle cx="54" cy="140" r="5.5" fill="#ED8B00"/>
-      <text x="68" y="145" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">Java / C++ / C</text>
-    </g>
+  <!-- PYTHON -->
+  <text x="30" y="95" font-family="'Courier New',Courier,monospace" font-size="11" fill="#aac8f0" letter-spacing="0.5">PYTHON</text>
+  <rect x="130" y="83" width="230" height="9" fill="#060e1a"/>
+  <rect x="130" y="83" width="230" height="9" fill="url(#bluebar)"/>
+  <rect x="130" y="83" width="230" height="9" fill="#060e1a">
+    <animate attributeName="width" values="230;14" dur="1.2s" begin="0.2s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="130;346" dur="1.2s" begin="0.2s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="368" y="94" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#00f0ff">94%</text>
 
-    <!-- SQL / PHP -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.75s" fill="freeze"/>
-      <rect x="36" y="160" width="216" height="28" rx="7" fill="#4479A1" fill-opacity="0.07" stroke="#4479A1" stroke-opacity="0.2" stroke-width="1"/>
-      <circle cx="54" cy="174" r="5.5" fill="#4479A1"/>
-      <text x="68" y="179" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">SQL / PHP</text>
-    </g>
-  </g>
+  <!-- JAVASCRIPT/TS -->
+  <text x="30" y="119" font-family="'Courier New',Courier,monospace" font-size="11" fill="#aac8f0" letter-spacing="0.5">JS / TYPESCRIPT</text>
+  <rect x="190" y="107" width="170" height="9" fill="#060e1a"/>
+  <rect x="190" y="107" width="170" height="9" fill="url(#bluebar)"/>
+  <rect x="190" y="107" width="170" height="9" fill="#060e1a">
+    <animate attributeName="width" values="170;27" dur="1.2s" begin="0.35s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="190;333" dur="1.2s" begin="0.35s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="368" y="118" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#00f0ff">84%</text>
 
-  <!-- ======================= CARD 2: AI/ML & FRAMEWORKS ======================= -->
-  <g>
-    <rect x="309" y="22" width="248" height="194" rx="10" fill="#000814" opacity="0.6"/>
-    <rect x="306" y="18" width="248" height="194" rx="10" fill="url(#card1bg)" stroke="#8b5cf6" stroke-opacity="0.25" stroke-width="1.5">
-      <animate attributeName="stroke-opacity" values="0.25;0.7;0.25" dur="5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="306" y="18" width="248" height="4" rx="2" fill="#8b5cf6">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
-    </rect>
-    <circle cx="326" cy="38" r="30" fill="#8b5cf6" opacity="0.04"/>
+  <!-- JAVA/C++ -->
+  <text x="30" y="143" font-family="'Courier New',Courier,monospace" font-size="11" fill="#aac8f0" letter-spacing="0.5">JAVA / C++</text>
+  <rect x="150" y="131" width="210" height="9" fill="#060e1a"/>
+  <rect x="150" y="131" width="210" height="9" fill="url(#bluebar)"/>
+  <rect x="150" y="131" width="210" height="9" fill="#060e1a">
+    <animate attributeName="width" values="210;42" dur="1.2s" begin="0.5s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="150;318" dur="1.2s" begin="0.5s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="368" y="142" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#00f0ff">80%</text>
 
-    <text x="430" y="44" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700" fill="#a78bfa" text-anchor="middle" letter-spacing="2.5" opacity="0">AI / ML &amp; FRAMEWORKS
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.4s" fill="freeze"/>
-    </text>
-    <line x1="326" y1="52" x2="534" y2="52" stroke="#8b5cf6" stroke-opacity="0.12" stroke-width="1"/>
+  <!-- Category: AI/ML -->
+  <text x="30" y="169" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#555" letter-spacing="2">// AI / ML</text>
 
-    <!-- TensorFlow/PyTorch -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.5s" fill="freeze"/>
-      <rect x="322" y="58" width="216" height="28" rx="7" fill="#FF6F00" fill-opacity="0.08" stroke="#FF6F00" stroke-opacity="0.25" stroke-width="1">
-        <animate attributeName="fill-opacity" values="0.08;0.18;0.08" dur="5s" repeatCount="indefinite"/>
-      </rect>
-      <circle cx="340" cy="72" r="5.5" fill="#FF6F00"/>
-      <text x="354" y="77" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">TensorFlow / PyTorch</text>
-    </g>
+  <!-- TENSORFLOW/PYTORCH -->
+  <text x="30" y="192" font-family="'Courier New',Courier,monospace" font-size="11" fill="#dbb4ff" letter-spacing="0.5">TENSORFLOW/PYTORCH</text>
+  <rect x="247" y="180" width="113" height="9" fill="#060e1a"/>
+  <rect x="247" y="180" width="113" height="9" fill="url(#purplebar)"/>
+  <rect x="247" y="180" width="113" height="9" fill="#060e1a">
+    <animate attributeName="width" values="113;22" dur="1.2s" begin="0.65s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="247;338" dur="1.2s" begin="0.65s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="368" y="191" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#bf00ff">81%</text>
 
-    <!-- LangChain / LlamaIndex -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.65s" fill="freeze"/>
-      <rect x="322" y="92" width="216" height="28" rx="7" fill="#10b981" fill-opacity="0.07" stroke="#10b981" stroke-opacity="0.2" stroke-width="1"/>
-      <circle cx="340" cy="106" r="5.5" fill="#10b981"/>
-      <text x="354" y="111" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">LangChain / LlamaIndex</text>
-    </g>
+  <!-- LANGCHAIN/RAG -->
+  <text x="30" y="216" font-family="'Courier New',Courier,monospace" font-size="11" fill="#dbb4ff" letter-spacing="0.5">LANGCHAIN / RAG</text>
+  <rect x="207" y="204" width="153" height="9" fill="#060e1a"/>
+  <rect x="207" y="204" width="153" height="9" fill="url(#purplebar)"/>
+  <rect x="207" y="204" width="153" height="9" fill="#060e1a">
+    <animate attributeName="width" values="153;31" dur="1.2s" begin="0.8s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="207;329" dur="1.2s" begin="0.8s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="368" y="215" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#bf00ff">80%</text>
 
-    <!-- React / React Native -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.80s" fill="freeze"/>
-      <rect x="322" y="126" width="216" height="28" rx="7" fill="#61DAFB" fill-opacity="0.07" stroke="#61DAFB" stroke-opacity="0.2" stroke-width="1"/>
-      <circle cx="340" cy="140" r="5.5" fill="#61DAFB"/>
-      <text x="354" y="145" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">React / React Native</text>
-    </g>
+  <!-- MLOps/OpenAI -->
+  <text x="30" y="240" font-family="'Courier New',Courier,monospace" font-size="11" fill="#dbb4ff" letter-spacing="0.5">MLOps / OPENAI API</text>
+  <rect x="237" y="228" width="123" height="9" fill="#060e1a"/>
+  <rect x="237" y="228" width="123" height="9" fill="url(#purplebar)"/>
+  <rect x="237" y="228" width="123" height="9" fill="#060e1a">
+    <animate attributeName="width" values="123;37" dur="1.2s" begin="0.95s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="237;323" dur="1.2s" begin="0.95s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="368" y="239" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#bf00ff">76%</text>
 
-    <!-- Flask / Spring Boot -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.95s" fill="freeze"/>
-      <rect x="322" y="160" width="216" height="28" rx="7" fill="#6db33f" fill-opacity="0.07" stroke="#6db33f" stroke-opacity="0.2" stroke-width="1"/>
-      <circle cx="340" cy="174" r="5.5" fill="#6db33f"/>
-      <text x="354" y="179" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">Flask / Spring Boot</text>
-    </g>
-  </g>
+  <!-- ═══ VERTICAL DIVIDER ═══ -->
+  <line x1="410" y1="48" x2="410" y2="330" stroke="#00f0ff" stroke-opacity="0.1" stroke-width="1"/>
 
-  <!-- ======================= CARD 3: CLOUD, DEVOPS & DBs ======================= -->
-  <g>
-    <rect x="595" y="22" width="248" height="194" rx="10" fill="#000814" opacity="0.6"/>
-    <rect x="592" y="18" width="248" height="194" rx="10" fill="url(#card1bg)" stroke="#f43f5e" stroke-opacity="0.25" stroke-width="1.5">
-      <animate attributeName="stroke-opacity" values="0.25;0.7;0.25" dur="6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="592" y="18" width="248" height="4" rx="2" fill="#f43f5e">
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite"/>
-    </rect>
-    <circle cx="612" cy="38" r="30" fill="#f43f5e" opacity="0.04"/>
+  <!-- ═══ RIGHT COLUMN ═══ -->
 
-    <text x="716" y="44" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="700" fill="#fb7185" text-anchor="middle" letter-spacing="2.5" opacity="0">CLOUD &amp; DEVOPS
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
-    </text>
-    <line x1="612" y1="52" x2="820" y2="52" stroke="#f43f5e" stroke-opacity="0.12" stroke-width="1"/>
+  <!-- Category: CLOUD/DEVOPS -->
+  <text x="430" y="72" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#555" letter-spacing="2">// CLOUD &amp; DEVOPS</text>
 
-    <!-- AWS / Azure -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.70s" fill="freeze"/>
-      <rect x="608" y="58" width="216" height="28" rx="7" fill="#ff9900" fill-opacity="0.08" stroke="#ff9900" stroke-opacity="0.25" stroke-width="1">
-        <animate attributeName="fill-opacity" values="0.08;0.18;0.08" dur="6s" repeatCount="indefinite"/>
-      </rect>
-      <circle cx="626" cy="72" r="5.5" fill="#ff9900"/>
-      <text x="640" y="77" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">AWS / Azure</text>
-    </g>
+  <!-- AWS/AZURE -->
+  <text x="430" y="95" font-family="'Courier New',Courier,monospace" font-size="11" fill="#ffd580" letter-spacing="0.5">AWS / AZURE</text>
+  <rect x="560" y="83" width="200" height="9" fill="#060e1a"/>
+  <rect x="560" y="83" width="200" height="9" fill="url(#orangebar)"/>
+  <rect x="560" y="83" width="200" height="9" fill="#060e1a">
+    <animate attributeName="width" values="200;40" dur="1.2s" begin="0.3s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="560;720" dur="1.2s" begin="0.3s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="768" y="94" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#ff9900">80%</text>
 
-    <!-- Docker / Kubernetes -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.85s" fill="freeze"/>
-      <rect x="608" y="92" width="216" height="28" rx="7" fill="#2496ED" fill-opacity="0.07" stroke="#2496ED" stroke-opacity="0.2" stroke-width="1"/>
-      <circle cx="626" cy="106" r="5.5" fill="#2496ED"/>
-      <text x="640" y="111" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">Docker / Kubernetes</text>
-    </g>
+  <!-- DOCKER/KUBERNETES -->
+  <text x="430" y="119" font-family="'Courier New',Courier,monospace" font-size="11" fill="#ffd580" letter-spacing="0.5">DOCKER / K8s</text>
+  <rect x="575" y="107" width="185" height="9" fill="#060e1a"/>
+  <rect x="575" y="107" width="185" height="9" fill="url(#orangebar)"/>
+  <rect x="575" y="107" width="185" height="9" fill="#060e1a">
+    <animate attributeName="width" values="185;46" dur="1.2s" begin="0.45s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="575;714" dur="1.2s" begin="0.45s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="768" y="118" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#ff9900">75%</text>
 
-    <!-- CI/CD / GitHub Actions -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.00s" fill="freeze"/>
-      <rect x="608" y="126" width="216" height="28" rx="7" fill="#F05032" fill-opacity="0.07" stroke="#F05032" stroke-opacity="0.2" stroke-width="1"/>
-      <circle cx="626" cy="140" r="5.5" fill="#F05032"/>
-      <text x="640" y="145" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">CI/CD / GitHub Actions</text>
-    </g>
+  <!-- CI/CD -->
+  <text x="430" y="143" font-family="'Courier New',Courier,monospace" font-size="11" fill="#ffd580" letter-spacing="0.5">CI/CD PIPELINES</text>
+  <rect x="605" y="131" width="155" height="9" fill="#060e1a"/>
+  <rect x="605" y="131" width="155" height="9" fill="url(#orangebar)"/>
+  <rect x="605" y="131" width="155" height="9" fill="#060e1a">
+    <animate attributeName="width" values="155;31" dur="1.2s" begin="0.6s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="605;729" dur="1.2s" begin="0.6s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="768" y="142" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#ff9900">80%</text>
 
-    <!-- MongoDB / PostgreSQL / Redis -->
-    <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.15s" fill="freeze"/>
-      <rect x="608" y="160" width="216" height="28" rx="7" fill="#47A248" fill-opacity="0.07" stroke="#47A248" stroke-opacity="0.2" stroke-width="1"/>
-      <circle cx="626" cy="174" r="5.5" fill="#47A248"/>
-      <text x="640" y="179" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#c9d1d9">MongoDB / PgSQL / Redis</text>
-    </g>
-  </g>
+  <!-- Category: FRAMEWORKS/DB -->
+  <text x="430" y="169" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#555" letter-spacing="2">// FRAMEWORKS &amp; DATA</text>
+
+  <!-- REACT/REACT NATIVE -->
+  <text x="430" y="192" font-family="'Courier New',Courier,monospace" font-size="11" fill="#a8f5c0" letter-spacing="0.5">REACT / REACT NATIVE</text>
+  <rect x="647" y="180" width="113" height="9" fill="#060e1a"/>
+  <rect x="647" y="180" width="113" height="9" fill="url(#greenbar)"/>
+  <rect x="647" y="180" width="113" height="9" fill="#060e1a">
+    <animate attributeName="width" values="113;17" dur="1.2s" begin="0.75s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="647;743" dur="1.2s" begin="0.75s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="768" y="191" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#00ff41">85%</text>
+
+  <!-- FLASK/SPRING BOOT -->
+  <text x="430" y="216" font-family="'Courier New',Courier,monospace" font-size="11" fill="#a8f5c0" letter-spacing="0.5">FLASK / SPRING BOOT</text>
+  <rect x="637" y="204" width="123" height="9" fill="#060e1a"/>
+  <rect x="637" y="204" width="123" height="9" fill="url(#greenbar)"/>
+  <rect x="637" y="204" width="123" height="9" fill="#060e1a">
+    <animate attributeName="width" values="123;25" dur="1.2s" begin="0.9s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="637;735" dur="1.2s" begin="0.9s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="768" y="215" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#00ff41">79%</text>
+
+  <!-- PostgreSQL/MongoDB/Redis -->
+  <text x="430" y="240" font-family="'Courier New',Courier,monospace" font-size="11" fill="#a8f5c0" letter-spacing="0.5">PgSQL / MongoDB / Redis</text>
+  <rect x="659" y="228" width="101" height="9" fill="#060e1a"/>
+  <rect x="659" y="228" width="101" height="9" fill="url(#greenbar)"/>
+  <rect x="659" y="228" width="101" height="9" fill="#060e1a">
+    <animate attributeName="width" values="101;20" dur="1.2s" begin="1.05s" fill="freeze" calcMode="ease-out"/>
+    <animate attributeName="x" values="659;740" dur="1.2s" begin="1.05s" fill="freeze" calcMode="ease-out"/>
+  </rect>
+  <text x="768" y="239" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#00ff41">80%</text>
+
+  <!-- BOTTOM DIVIDER + LEGEND -->
+  <rect x="0" y="268" width="800" height="0.8" fill="#00f0ff" opacity="0.1"/>
+  <text x="30" y="290" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#444" letter-spacing="1">LEGEND:</text>
+  <rect x="88" y="282" width="40" height="6" fill="url(#bluebar)"/>
+  <text x="134" y="290" font-family="'Courier New',Courier,monospace" font-size="8" fill="#555">LANGUAGES</text>
+  <rect x="230" y="282" width="40" height="6" fill="url(#purplebar)"/>
+  <text x="276" y="290" font-family="'Courier New',Courier,monospace" font-size="8" fill="#555">AI / ML</text>
+  <rect x="350" y="282" width="40" height="6" fill="url(#orangebar)"/>
+  <text x="396" y="290" font-family="'Courier New',Courier,monospace" font-size="8" fill="#555">CLOUD</text>
+  <rect x="460" y="282" width="40" height="6" fill="url(#greenbar)"/>
+  <text x="506" y="290" font-family="'Courier New',Courier,monospace" font-size="8" fill="#555">FRAMEWORKS</text>
+
+  <!-- Scan line -->
+  <rect x="0" y="0" width="800" height="1.5" fill="#00f0ff" opacity="0">
+    <animate attributeName="y" values="40;330;40" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.06;0" dur="5s" repeatCount="indefinite"/>
+  </rect>
 </svg>
