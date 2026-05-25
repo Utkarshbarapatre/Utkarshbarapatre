@@ -1,168 +1,196 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
+<svg width="800" height="250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070a13" />
-      <stop offset="100%" stop-color="#0d1117" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
-
-    <!-- Glowing card gradients -->
-    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#161b22" />
-      <stop offset="100%" stop-color="#0e131b" />
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
   </defs>
 
-  <style>
-    .bg {
-      fill: url(#bg-grad);
-    }
+  <rect width="800" height="250" rx="12" fill="url(#bg)"/>
 
-    .card {
-      fill: url(#card-grad);
-      stroke: rgba(88, 166, 255, 0.1);
-      stroke-width: 1.5px;
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
+  <!-- Card 1: Languages -->
+  <g>
+    <rect x="20" y="18" width="240" height="216" rx="10" fill="url(#cardBg)" stroke="#58a6ff" stroke-opacity="0.15" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.15;0.4;0.15" dur="4s" repeatCount="indefinite"/>
+    </rect>
 
-    .card-container:hover .card {
-      stroke: rgba(188, 133, 255, 0.4);
-      filter: drop-shadow(0 6px 16px rgba(188, 133, 255, 0.15));
-      transform: translateY(-2px);
-    }
+    <!-- Card accent top bar -->
+    <rect x="20" y="18" width="240" height="3" rx="1.5" fill="#58a6ff" opacity="0.5"/>
 
-    .card-title {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      fill: #ffffff;
-      letter-spacing: 1px;
-    }
+    <text x="140" y="46" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1.5" opacity="0">
+      LANGUAGES
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.2s" fill="freeze"/>
+    </text>
+    <line x1="40" y1="56" x2="240" y2="56" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
 
-    .pill {
-      fill: rgba(255, 255, 255, 0.02);
-      stroke: rgba(255, 255, 255, 0.08);
-      stroke-width: 1px;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
+    <!-- C/C++ row -->
+    <rect x="36" y="65" width="208" height="34" rx="7" fill="#00599C" fill-opacity="0.08" stroke="#00599C" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/>
+      <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="56" cy="82" r="6" fill="#00599C" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/>
+    </circle>
+    <text x="72" y="87" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">C / C++
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.4s" fill="freeze"/>
+    </text>
 
-    .pill:hover {
-      fill: rgba(255, 255, 255, 0.08);
-      stroke: #58a6ff;
-    }
+    <!-- Python row -->
+    <rect x="36" y="107" width="208" height="34" rx="7" fill="#3776AB" fill-opacity="0.08" stroke="#3776AB" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.55s" fill="freeze"/>
+      <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="56" cy="124" r="6" fill="#3776AB" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.55s" fill="freeze"/>
+    </circle>
+    <text x="72" y="129" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">Python
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.55s" fill="freeze"/>
+    </text>
 
-    .skill-text {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      fill: #c9d1d9;
-    }
+    <!-- Java row -->
+    <rect x="36" y="149" width="208" height="34" rx="7" fill="#ED8B00" fill-opacity="0.08" stroke="#ED8B00" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.70s" fill="freeze"/>
+      <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="56" cy="166" r="6" fill="#ED8B00" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.70s" fill="freeze"/>
+    </circle>
+    <text x="72" y="171" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">Java
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.70s" fill="freeze"/>
+    </text>
 
-    /* Floating/Breathing Animation for Pills */
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-4px); }
-      100% { transform: translateY(0px); }
-    }
-
-    .group-1 { animation: float 5s ease-in-out infinite; }
-    .group-2 { animation: float 5.5s ease-in-out infinite 0.4s; }
-    .group-3 { animation: float 4.8s ease-in-out infinite 0.8s; }
-    .group-4 { animation: float 6s ease-in-out infinite 0.2s; }
-    .group-5 { animation: float 5.2s ease-in-out infinite 0.6s; }
-    .group-6 { animation: float 4.5s ease-in-out infinite 1s; }
-    .group-7 { animation: float 5.8s ease-in-out infinite 0.5s; }
-
-    .card-container {
-      transition: transform 0.3s ease;
-    }
-  </style>
-
-  <!-- Canvas Background -->
-  <rect width="100%" height="100%" class="bg" rx="12" />
-
-  <!-- ================= COLUMN 1: LANGUAGES ================= -->
-  <g class="card-container" transform="translate(30, 20)">
-    <rect class="card" width="230" height="200" rx="12" />
-    <text x="115" y="32" class="card-title" text-anchor="middle">LANGUAGES</text>
-    <line x1="20" y1="45" x2="210" y2="45" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
-
-    <!-- C/C++ -->
-    <g class="group-1" transform="translate(20, 58)">
-      <rect class="pill" width="190" height="32" rx="8" />
-      <circle cx="20" cy="16" r="5" fill="#00599C" />
-      <text x="36" y="20" class="skill-text">C / C++</text>
-    </g>
-
-    <!-- Python -->
-    <g class="group-2" transform="translate(20, 100)">
-      <rect class="pill" width="190" height="32" rx="8" />
-      <circle cx="20" cy="16" r="5" fill="#3776AB" />
-      <text x="36" y="20" class="skill-text">Python</text>
-    </g>
-
-    <!-- Java -->
-    <g class="group-3" transform="translate(20, 142)">
-      <rect class="pill" width="190" height="32" rx="8" />
-      <circle cx="20" cy="16" r="5" fill="#ED8B00" />
-      <text x="36" y="20" class="skill-text">Java</text>
-    </g>
+    <!-- HTML/CSS/JS row -->
+    <rect x="36" y="191" width="208" height="34" rx="7" fill="#E34F26" fill-opacity="0.08" stroke="#E34F26" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.85s" fill="freeze"/>
+    </rect>
+    <circle cx="56" cy="208" r="6" fill="#E34F26" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.85s" fill="freeze"/>
+    </circle>
+    <text x="72" y="213" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">HTML / CSS / JS
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.85s" fill="freeze"/>
+    </text>
   </g>
 
-  <!-- ================= COLUMN 2: FRAMEWORKS ================= -->
-  <g class="card-container" transform="translate(285, 20)">
-    <rect class="card" width="230" height="200" rx="12" />
-    <text x="115" y="32" class="card-title" text-anchor="middle">FRAMEWORKS &amp; LIBS</text>
-    <line x1="20" y1="45" x2="210" y2="45" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+  <!-- Card 2: Frameworks -->
+  <g>
+    <rect x="280" y="18" width="240" height="216" rx="10" fill="url(#cardBg)" stroke="#bc85ff" stroke-opacity="0.15" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.15;0.4;0.15" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="280" y="18" width="240" height="3" rx="1.5" fill="#bc85ff" opacity="0.5"/>
+
+    <text x="400" y="46" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1.5" opacity="0">
+      FRAMEWORKS
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.4s" fill="freeze"/>
+    </text>
+    <line x1="300" y1="56" x2="500" y2="56" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
 
     <!-- React Native -->
-    <g class="group-4" transform="translate(20, 58)">
-      <rect class="pill" width="190" height="32" rx="8" />
-      <circle cx="20" cy="16" r="5" fill="#61DAFB" />
-      <text x="36" y="20" class="skill-text">React Native</text>
-    </g>
+    <rect x="296" y="65" width="208" height="34" rx="7" fill="#61DAFB" fill-opacity="0.07" stroke="#61DAFB" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.6s" fill="freeze"/>
+      <animate attributeName="fill-opacity" values="0.07;0.15;0.07" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="316" cy="82" r="6" fill="#61DAFB" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.6s" fill="freeze"/>
+    </circle>
+    <text x="332" y="87" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">React Native
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.6s" fill="freeze"/>
+    </text>
 
     <!-- Flask -->
-    <g class="group-5" transform="translate(20, 100)">
-      <rect class="pill" width="190" height="32" rx="8" />
-      <circle cx="20" cy="16" r="5" fill="#000000" stroke="#888" stroke-width="0.5" />
-      <text x="36" y="20" class="skill-text">Flask (Python)</text>
-    </g>
-
-    <!-- Web Essentials -->
-    <g class="group-6" transform="translate(20, 142)">
-      <rect class="pill" width="190" height="32" rx="8" />
-      <circle cx="20" cy="16" r="5" fill="#E34F26" />
-      <text x="36" y="20" class="skill-text">HTML5 / CSS3 / JS</text>
-    </g>
-  </g>
-
-  <!-- ================= COLUMN 3: DEVOPS & TOOLS ================= -->
-  <g class="card-container" transform="translate(540, 20)">
-    <rect class="card" width="230" height="200" rx="12" />
-    <text x="115" y="32" class="card-title" text-anchor="middle">DEVOP &amp; TOOLS</text>
-    <line x1="20" y1="45" x2="210" y2="45" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+    <rect x="296" y="107" width="208" height="34" rx="7" fill="#ffffff" fill-opacity="0.04" stroke="#888" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.75s" fill="freeze"/>
+    </rect>
+    <circle cx="316" cy="124" r="6" fill="#a0a0a0" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.75s" fill="freeze"/>
+    </circle>
+    <text x="332" y="129" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">Flask
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.75s" fill="freeze"/>
+    </text>
 
     <!-- Ansible -->
-    <g class="group-7" transform="translate(20, 58)">
-      <rect class="pill" width="190" height="32" rx="8" />
-      <circle cx="20" cy="16" r="5" fill="#EE0000" />
-      <text x="36" y="20" class="skill-text">Ansible</text>
-    </g>
+    <rect x="296" y="149" width="208" height="34" rx="7" fill="#EE0000" fill-opacity="0.07" stroke="#EE0000" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.90s" fill="freeze"/>
+      <animate attributeName="fill-opacity" values="0.07;0.14;0.07" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="316" cy="166" r="6" fill="#EE0000" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.90s" fill="freeze"/>
+    </circle>
+    <text x="332" y="171" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">Ansible
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.90s" fill="freeze"/>
+    </text>
 
-    <!-- Git & GitHub -->
-    <g class="group-1" transform="translate(20, 100)">
-      <rect class="pill" width="190" height="32" rx="8" />
-      <circle cx="20" cy="16" r="5" fill="#F05032" />
-      <text x="36" y="20" class="skill-text">Git / GitHub</text>
-    </g>
+    <!-- Netlify/Vercel -->
+    <rect x="296" y="191" width="208" height="34" rx="7" fill="#00C7B7" fill-opacity="0.07" stroke="#00C7B7" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.05s" fill="freeze"/>
+    </rect>
+    <circle cx="316" cy="208" r="6" fill="#00C7B7" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.05s" fill="freeze"/>
+    </circle>
+    <text x="332" y="213" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">Netlify / Vercel
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.05s" fill="freeze"/>
+    </text>
+  </g>
 
-    <!-- CI/CD & Deploy -->
-    <g class="group-2" transform="translate(20, 142)">
-      <rect class="pill" width="190" height="32" rx="8" />
-      <circle cx="20" cy="16" r="5" fill="#00C7B7" />
-      <text x="36" y="20" class="skill-text">Netlify / Vercel</text>
-    </g>
+  <!-- Card 3: DevOps & Tools -->
+  <g>
+    <rect x="540" y="18" width="240" height="216" rx="10" fill="url(#cardBg)" stroke="#ff79c6" stroke-opacity="0.15" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.15;0.4;0.15" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="540" y="18" width="240" height="3" rx="1.5" fill="#ff79c6" opacity="0.5"/>
+
+    <text x="660" y="46" font-family="'Segoe UI', system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1.5" opacity="0">
+      DEVOPS &amp; TOOLS
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.6s" fill="freeze"/>
+    </text>
+    <line x1="560" y1="56" x2="760" y2="56" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
+
+    <!-- Git / GitHub -->
+    <rect x="556" y="65" width="208" height="34" rx="7" fill="#F05032" fill-opacity="0.07" stroke="#F05032" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.8s" fill="freeze"/>
+      <animate attributeName="fill-opacity" values="0.07;0.14;0.07" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="576" cy="82" r="6" fill="#F05032" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.8s" fill="freeze"/>
+    </circle>
+    <text x="592" y="87" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">Git / GitHub
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.8s" fill="freeze"/>
+    </text>
+
+    <!-- VS Code -->
+    <rect x="556" y="107" width="208" height="34" rx="7" fill="#007ACC" fill-opacity="0.07" stroke="#007ACC" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.95s" fill="freeze"/>
+    </rect>
+    <circle cx="576" cy="124" r="6" fill="#007ACC" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.95s" fill="freeze"/>
+    </circle>
+    <text x="592" y="129" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">VS Code
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.95s" fill="freeze"/>
+    </text>
+
+    <!-- Linux / Bash -->
+    <rect x="556" y="149" width="208" height="34" rx="7" fill="#ffb300" fill-opacity="0.07" stroke="#ffb300" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.10s" fill="freeze"/>
+    </rect>
+    <circle cx="576" cy="166" r="6" fill="#ffb300" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.10s" fill="freeze"/>
+    </circle>
+    <text x="592" y="171" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">Linux / Bash
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.10s" fill="freeze"/>
+    </text>
+
+    <!-- REST APIs -->
+    <rect x="556" y="191" width="208" height="34" rx="7" fill="#bc85ff" fill-opacity="0.07" stroke="#bc85ff" stroke-opacity="0.2" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.25s" fill="freeze"/>
+    </rect>
+    <circle cx="576" cy="208" r="6" fill="#bc85ff" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.25s" fill="freeze"/>
+    </circle>
+    <text x="592" y="213" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#c9d1d9" opacity="0">REST APIs
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.25s" fill="freeze"/>
+    </text>
   </g>
 </svg>
