@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+
+    <!-- Text Gradient -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="50%" stop-color="#bc85ff" />
+      <stop offset="100%" stop-color="#ff79c6" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(88, 166, 255, 0.04)" stroke-width="1" />
+    </pattern>
+
+    <!-- Blur Filter for Glowing Orbs -->
+    <filter id="glow-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" result="blur" />
+    </filter>
+
+    <!-- Typing Clip Path -->
+    <clipPath id="typing-clip">
+      <rect id="clip-rect" x="0" y="0" width="0" height="40" />
+    </clipPath>
+  </defs>
+
+  <style>
+    /* CSS Styling & Animations */
+    .bg {
+      fill: url(#bg-grad);
+    }
+    
+    .grid-overlay {
+      fill: url(#grid);
+    }
+
+    /* Orb Floating Animations */
+    @keyframes orb-float-left {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(50px, 30px) scale(1.1); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+
+    @keyframes orb-float-right {
+      0% { transform: translate(0px, 0px) scale(1.1); }
+      50% { transform: translate(-60px, -40px) scale(0.9); }
+      100% { transform: translate(0px, 0px) scale(1.1); }
+    }
+
+    .orb-left {
+      fill: #bc85ff;
+      opacity: 0.15;
+      filter: url(#glow-blur);
+      animation: orb-float-left 12s ease-in-out infinite;
+      transform-origin: 150px 100px;
+    }
+
+    .orb-right {
+      fill: #00f2fe;
+      opacity: 0.12;
+      filter: url(#glow-blur);
+      animation: orb-float-right 16s ease-in-out infinite;
+      transform-origin: 650px 160px;
+    }
+
+    /* Main Title Animations */
+    @keyframes glow-pulse {
+      0% { text-shadow: 0 0 10px rgba(188, 133, 255, 0.2); }
+      50% { text-shadow: 0 0 25px rgba(188, 133, 255, 0.6), 0 0 40px rgba(0, 242, 254, 0.4); }
+      100% { text-shadow: 0 0 10px rgba(188, 133, 255, 0.2); }
+    }
+
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Outfit", sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      fill: url(#text-grad);
+      letter-spacing: 4px;
+      animation: glow-pulse 4s ease-in-out infinite;
+    }
+
+    /* Typing Animation Settings */
+    @keyframes type-anim {
+      0%, 10% { width: 0; }
+      45%, 55% { width: 520px; } /* Fits the text length */
+      90%, 100% { width: 0; }
+    }
+
+    @keyframes cursor-anim {
+      0%, 10% { transform: translateX(0); }
+      45%, 55% { transform: translateX(520px); }
+      90%, 100% { transform: translateX(0); }
+    }
+
+    @keyframes cursor-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    #clip-rect {
+      animation: type-anim 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    #cursor {
+      animation: cursor-anim 8s cubic-bezier(0.4, 0, 0.2, 1) infinite, cursor-blink 0.8s infinite;
+    }
+
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      fill: #8b9eb0;
+      letter-spacing: 2px;
+    }
+
+    /* Tech Icon Badge Styling */
+    .badge {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .badge:hover {
+      transform: translateY(-5px);
+      filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.6));
+    }
+    
+    @keyframes line-glow {
+      0%, 100% { stroke-dashoffset: 0; }
+      50% { stroke-dashoffset: 400; }
+    }
+    
+    .glowing-border {
+      stroke: url(#text-grad);
+      stroke-width: 1.5px;
+      fill: none;
+      stroke-dasharray: 100 300;
+      animation: line-glow 10s linear infinite;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" rx="12" />
+  
+  <!-- Cyber Grid overlay -->
+  <rect width="100%" height="100%" class="grid-overlay" rx="12" />
+
+  <!-- Animated Glowing Orbs -->
+  <circle cx="150" cy="100" r="130" class="orb-left" />
+  <circle cx="650" cy="160" r="140" class="orb-right" />
+
+  <!-- Outer Border with Glowing Effect -->
+  <rect x="1" y="1" width="798" height="258" rx="11" class="glowing-border" />
+
+  <!-- Title "UTKARSH BARAPATRE" -->
+  <g transform="translate(400, 110)">
+    <text text-anchor="middle" class="title">UTKARSH BARAPATRE</text>
+  </g>
+
+  <!-- Typing Subtitle Container -->
+  <!-- We center the typing block by placing it at X=140 (approx 400 - 520/2) -->
+  <g transform="translate(140, 160)">
+    <!-- Clipped Subtitle Text -->
+    <g clip-path="url(#typing-clip)">
+      <text x="0" y="20" class="subtitle-text">COMPUTER ENGINEER | DEVELOPER | PROBLEM SOLVER</text>
+    </g>
+    <!-- Typing Cursor -->
+    <line id="cursor" x1="0" y1="2" x2="0" y2="24" stroke="#bc85ff" stroke-width="2.5" />
+  </g>
+
+  <!-- Visual Accent Lines -->
+  <line x1="250" y1="210" x2="550" y2="210" stroke="rgba(188, 133, 255, 0.2)" stroke-width="1.5" stroke-dasharray="10 5" />
+</svg>
