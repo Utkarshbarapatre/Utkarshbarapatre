@@ -1,21 +1,21 @@
 <!-- Header Banner -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/header.svg" width="100%" alt="Utkarsh Barapatre Header" />
+  <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/header.svg?v=3" width="100%" alt="Utkarsh Barapatre Header" />
 </p>
 
 <!-- Animated Social Links -->
 <p align="center">
   <a href="https://utkarshbarapatre.netlify.app/" target="_blank">
-    <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/web.svg" width="170" alt="Portfolio" />
+    <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/web.svg?v=3" width="170" alt="Portfolio" />
   </a>
   <a href="https://linkedin.com/in/utkarshbarapatre" target="_blank">
-    <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/linkedin.svg" width="170" alt="LinkedIn" />
+    <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/linkedin.svg?v=3" width="170" alt="LinkedIn" />
   </a>
   <a href="mailto:barapatreutkarsh2003@gmail.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/email.svg" width="170" alt="Email" />
+    <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/email.svg?v=3" width="170" alt="Email" />
   </a>
   <a href="https://github.com/Utkarshbarapatre" target="_blank">
-    <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/github.svg" width="170" alt="GitHub" />
+    <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/github.svg?v=3" width="170" alt="GitHub" />
   </a>
 </p>
 
@@ -36,7 +36,7 @@ Hello! I am **Utkarsh Barapatre**, a passionate **Computer Engineer** and softwa
 
 <!-- Skills SVG -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/skills.svg" width="100%" alt="My Skills Stack" />
+  <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/skills.svg?v=3" width="100%" alt="My Skills Stack" />
 </p>
 
 ---
@@ -45,7 +45,7 @@ Hello! I am **Utkarsh Barapatre**, a passionate **Computer Engineer** and softwa
 
 <!-- Achievements SVG -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/achievements.svg" width="100%" alt="My Achievements" />
+  <img src="https://raw.githubusercontent.com/Utkarshbarapatre/Utkarshbarapatre/main/images/achievements.svg?v=3" width="100%" alt="My Achievements" />
 </p>
 
 ---
@@ -55,7 +55,7 @@ Hello! I am **Utkarsh Barapatre**, a passionate **Computer Engineer** and softwa
 <p align="center">
   <!-- GitHub Stats Card -->
   <a href="https://github.com/Utkarshbarapatre" target="_blank">
-    <img src="https://github-readme-stats.vercel.app/api?username=Utkarshbarapatre&show_icons=true&theme=tokyonight&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=bc85ff&border_color=30363d" width="48%" alt="GitHub Stats" />
+    <img src="https://github-readme-stats-anuraghazra.vercel.app/api?username=Utkarshbarapatre&show_icons=true&theme=tokyonight&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=bc85ff&border_color=30363d" width="48%" alt="GitHub Stats" />
   </a>
   &nbsp;
   <!-- GitHub Streak Card -->
